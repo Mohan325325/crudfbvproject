@@ -1,0 +1,10 @@
+{% extends 'crudfbvapp/base.html' %}
+{% block main-content %}
+    <form method="post">
+        <h2>Insert New Record</h2>
+        {{ form.as_p }}
+        {% csrf_token %}
+        <button class="btn btn-success">SUBMIT</button>
+    </form>
+
+{% endblock main-content %}

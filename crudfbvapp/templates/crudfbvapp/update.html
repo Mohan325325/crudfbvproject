@@ -1,0 +1,12 @@
+{% extends 'crudfbvapp/base.html' %}
+{% block main-content %}
+    <h2>Update the Form Information</h2>
+    <form method="post">
+        {% csrf_token %}
+        Employee Number : <input type="text" name="eno" value="{{ employee.eno }}"><br><br>
+        Employee Name : <input type="text" name="ename" value="{{ employee.ename }}"><br><br>
+        Employee Salary : <input type="text" name="esal" value="{{ employee.esal }}"><br><br>
+        Employee Address : <input type="text" name="eaddr" value="{{ employee.eaddr }}"><br><br>
+    <a><button class="btn btn-success">UPDATE</button></a>
+    </form>
+{% endblock main-content %}
